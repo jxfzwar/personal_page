@@ -272,10 +272,6 @@ a:hover {
   animation: fadeInUp 300ms linear 1200ms both;
 }
 
-.feature {
-	padding:50px;
-}
-
 .text-center i {
 	font-size:40px;
 	margin-top:70px;
@@ -292,6 +288,17 @@ a:hover {
 	text-transform:uppercase;
 	font-size:18px;
 	color: #1BBD36;
+}
+
+.feature {
+    background:#eee;
+	padding:50px;
+}
+
+.feature h2 {
+	font-size:20px;
+	font-weight:600;
+	color:#333;
 }
 
 .hi-icon-effect i.fa:hover {
@@ -479,7 +486,6 @@ a:hover {
 
 
 .about {
-	background:#eee;
 	padding:50px;
 }
 
@@ -490,15 +496,6 @@ a:hover {
 .about img {
 	margin-bottom:30px;
 	border-radius:6px;
-}
-
-.about .btn-slide {
-    padding: 8px 20px;
-    background: #1BBD36;
-    color: #fff;
-    border-radius: 4px;
-    margin-top: 5px;
-    display: inline-block;
 }
 
 .our-team {
@@ -1005,6 +1002,10 @@ ul.faq li > div h3 {
 
 .readmore{
   margin-top: 0;
+}
+
+.read-more-on-center{
+    text-align: center;
 }
 
 .blog .blog-item .blog-content h4 {
