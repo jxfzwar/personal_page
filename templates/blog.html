@@ -71,10 +71,10 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-2">
                                 <div class="entry-meta">
-                                    <span id="publish_date">07  JUNY</span>
-                                    <span><i class="fa fa-user"></i> <a href="#">John Doe</a></span>
+                                    <span id="publish_date">{{ article.publish_year }}</span>
+                                <!--<span><i class="fa fa-user"></i> <a href="#">John Doe</a></span>
                                     <span><i class="fa fa-comment"></i> <a href="#">2 Comments</a></span>
-                                    <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>
+                                    <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>-->
                                 </div>
                             </div>
                                 
@@ -82,8 +82,10 @@
                                 <h4>{{ article.title }}</h4>
                                 <h5>{{ article.author}}</h5>
                                 <p>{{ article.abstract}}</p>
-                                <p>{{ article.column}}</p>
-                                <a href={{ article.articleurl }} class="btn btn-primary readmore"> Read More <i class="fa fa-angle-right"></i></a>
+                                {% for column in article.column.all %}
+                                <p><span id="column"><i class="fa fa-user"></i> {{ column.name }} </span></p>
+                                {% endfor %}
+                                <p><a href="{{ article.articleurl }}" class="btn btn-primary readmore" >Read More <i class="fa fa-angle-right"></i></a></p>
                             </div>
                         </div>    
                     </div><!--/.blog-item-->
@@ -186,7 +188,7 @@
                     </div><!--/.archieve-->
     				
                     <div class="widget tags">
-                        <h3>Tag Cloud</h3>
+                        <h3><i class="fa fa-user"></i> Tag Cloud</h3>
                         <ul class="tag-cloud">
                             <li><a class="btn btn-xs btn-primary" href="#">Apple</a></li>
                             <li><a class="btn btn-xs btn-primary" href="#">Barcelona</a></li>
