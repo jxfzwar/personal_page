@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.contrib import admin
 
 # Register your models here.
 from django.contrib import admin
@@ -13,11 +12,11 @@ from .models import Article, Column
 class ArticleAdmin(admin.ModelAdmin):
     formfield_overrides = {
         models.TextField: {'widget': forms.Textarea(
-            attrs={'rows': 41,
-                   'cols': 100
+            attrs={'rows': 20,
+                   'cols': 110
                    })},
     }
-    list_display = ('title', 'pub_date')
+    list_display = ('title', 'publish_year','articleurl')
 
 class ColumnAdmin(admin.ModelAdmin):
     list_display = ('name', 'intro')

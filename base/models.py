@@ -23,7 +23,7 @@ class ArticleManager(models.Manager):
         query = self.get_queryset().filter(column_id=column_id)
 
     def query_by_time(self):
-        query = self.get_queryset().order_by('-pub_date')
+        query = self.get_queryset().order_by('-publish_year')
         return query
 
     def query_by_keyword(self, keyword):
@@ -36,9 +36,12 @@ class Article(models.Model):
     title = models.CharField(max_length=256)
     author = models.CharField(max_length=256)
     abstract = models.TextField('abstract')
-    pub_date = models.DateTimeField(auto_now_add=True, editable=True)
+    upload_date = models.DateTimeField(auto_now_add=True, editable=True)
+    #pdf = models.FileField()
+    articleurl = models.CharField(max_length=256)
+    publish_year = models.IntegerField()
     def __str__(self):
-        return self.title
+        return "{0}, {1}".format(self.title, self.articleurl)
     class Meta:
         verbose_name = 'article'
         verbose_name_plural = 'article'

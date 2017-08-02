@@ -1009,12 +1009,17 @@ ul.faq li > div h3 {
 }
 
 .blog .blog-item .blog-content h4 {
-	margin-bottom: 40px;
-	font-weight: 600
+	margin-bottom: 20px;
+	font-weight: 600;
+ }
+
+.blog .blog-item .blog-content h5 {
+	margin-bottom: 20px;
+    font-weight: 600;
  }
 
 .blog .blog-item .blog-content p {
-	font-size: 13px;
+	font-size: 14px;
 }
 
 .blog .blog-item .entry-meta {

@@ -20,4 +20,5 @@ from base import views
 urlpatterns = [
     url(r'^$', views.aindex, name='home'),
     url(r'^base/', include('base.urls')),
+    url(r'^admin/', include(admin.site.urls)),
 ]

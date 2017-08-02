@@ -79,11 +79,11 @@
                             </div>
                                 
                             <div class="col-xs-12 col-sm-10 blog-content">
-                                <a href="#"><img class="img-responsive img-blog" src="{% static "images/blog/blog1.jpg" %}" width="100%" alt="" /></a>
                                 <h4>{{ article.title }}</h4>
+                                <h5>{{ article.author}}</h5>
                                 <p>{{ article.abstract}}</p>
-                                <p>{{ article.conlumn}}</p>
-                                <a class="btn btn-primary readmore">Read More <i class="fa fa-angle-right"></i></a>
+                                <p>{{ article.column}}</p>
+                                <a href={{ article.articleurl }} class="btn btn-primary readmore"> Read More <i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>    
                     </div><!--/.blog-item-->
