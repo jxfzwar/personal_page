@@ -2,6 +2,7 @@
 
 from django.shortcuts import render
 from .models import Article,Column
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def aindex(request):
     return render(request, 'aindex.html')
@@ -40,8 +41,22 @@ def blog(request):
         SearchStatus = "Success"
     ResultAmount = len(SearchResult)
 
+
+
+    paginator = Paginator(SearchResult, 2)  # Show 2 articles per page
+
+    page = request.GET.get('page')
+    try:
+        contacts = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        contacts = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        contacts = paginator.page(paginator.num_pages)
+
     return render(request, 'blog.html', {"keyword": keyword,
-                                                "SearchResult": SearchResult,
+                                                "Contacts": contacts,
                                                 "SearchStatus": SearchStatus,
                                                 "ResultAmount": ResultAmount,
                                          "article_column":article_column})
