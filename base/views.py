@@ -43,7 +43,7 @@ def blog(request):
 
 
 
-    paginator = Paginator(SearchResult, 2)  # Show 2 articles per page
+    paginator = Paginator(SearchResult, 1)  # Show 1 articles per page
 
     page = request.GET.get('page')
     try:

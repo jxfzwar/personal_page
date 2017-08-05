@@ -145,11 +145,14 @@
                             <input type="text" name="searchWords" class="form-control search_box" autocomplete="off" placeholder="Search Here" value="">
                             <input type="submit" class="btn btn-primary subbotton" value="GO"/>
                         </form>
+                        <p></p>
+                        <p><i class="fa fa-eye"></i> {{ ResultAmount }} results for search</p>
+                        ResultAmount
                     </div><!--/.search-->
 
                     <div class="widget tags ">
                         <h4><i class="fa fa-user"></i> Tag Cloud</h4>
-                        <p><i class="fa fa-eye"></i> You can use the tags for quick search</p>
+                        <p><i class="fa fa-eye"></i> You can use these tags for quick search</p>
                         <ul class="tag-cloud">
                             {% for column in article_column %}
                             <li><a class="btn btn-xs btn-primary">{{ column.name }}</a></li>
