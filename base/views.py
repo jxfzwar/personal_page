@@ -3,6 +3,7 @@
 from django.shortcuts import render
 from .models import Article,Column
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.core.mail import send_mail
 
 def aindex(request):
     return render(request, 'aindex.html')
@@ -69,6 +70,11 @@ def portfolio(request):
 
 def services(request):
     return render(request, 'services.html')
+
+def sendemail(request):
+    send_mail('Subject here', 'Here is the message.', '845251590@qq.com',
+              ['jxfzwar@163.com'], fail_silently=False)
+    return render(request, 'sendemail.html')
 
 
 

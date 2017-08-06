@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^contact.html/$', views.contact, name='contact'),
     url(r'^portfolio.html/$', views.portfolio, name='portfolio'),
     url(r'^services.html/$', views.services, name='services'),
+    url(r'^sendemail.html/$', views.sendemail, name='sendemail'),
 ]
