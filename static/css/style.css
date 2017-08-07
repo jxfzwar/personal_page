@@ -983,7 +983,7 @@ ul.faq li > div h3 {
 .blog-item {
   border-radius: 0;
   overflow: hidden;
-  margin-bottom: 0px;
+  margin-bottom: 50px;
 }
 
 .blog .blog-item .img-blog {
@@ -1145,9 +1145,9 @@ ul.sidebar-gallery {
 
 /* --- contact --- */
 #contact-page{
-  padding-top: 20px;
+  padding-top: 140px;
   background:#fff;
-  margin-bottom:20px;
+  margin-bottom:140px;
 }
 
 #contact-page .container .center p{
