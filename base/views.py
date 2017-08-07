@@ -63,18 +63,43 @@ def blog(request):
                                          "article_column":article_column})
 
 def contact(request):
-    return render(request, 'contact.html')
+    name = request.POST.get('name')
+    email = request.POST.get('email')
+    number = request.POST.get('number')
+    company = request.POST.get('company')
+    subject = request.POST.get('subject')
+    message = request.POST.get('message')
+
+    if name == None and email == None and number == None and company == None and subject == None and message == None:
+        submitstatus = "none"
+    elif name != None and email != None and subject != None and message != None:
+        if number == None and company == None:
+            sendsubject = 'From Personal Webpage: ' + subject
+            sendcontent = 'name: ' + name + '\n' + 'email: ' + email + '\n' + 'message: ' + message
+            send_mail(sendsubject, sendcontent, '845251590@qq.com', ['jxfzwar@163.com'], fail_silently=False)
+        elif number != None and company == None:
+            sendsubject = 'From Personal Webpage: ' + subject
+            sendcontent = 'name: ' + name + '\n' + 'email: ' + email + '\n' + 'number: ' + number + '\n' + 'message: ' + message
+            send_mail(sendsubject, sendcontent, '845251590@qq.com', ['jxfzwar@163.com'], fail_silently=False)
+        elif number == None and company != None:
+            sendsubject = 'From Personal Webpage: ' + subject
+            sendcontent = 'name: ' + name + '\n' + 'email: ' + email + '\n' + 'company: ' + company + '\n' + 'message: ' + message
+            send_mail(sendsubject, sendcontent, '845251590@qq.com', ['jxfzwar@163.com'], fail_silently=False)
+        elif number != None and company != None:
+            sendsubject = 'From Personal Webpage: ' + subject
+            sendcontent = 'name: ' + name + '\n' + 'email: ' + email + '\n' + 'number: ' + number + '\n' + 'company: ' + company + '\n' + 'message: ' + message
+            send_mail(sendsubject, sendcontent, '845251590@qq.com', ['jxfzwar@163.com'], fail_silently=False)
+        submitstatus = "correct"
+    else:
+        submitstatus = "not complete"
+
+    return render(request, 'contact.html', {"submitstatus": submitstatus})
 
 def portfolio(request):
     return render(request, 'portfolio.html')
 
 def services(request):
     return render(request, 'services.html')
-
-def sendemail(request):
-    send_mail('Subject here', 'Here is the message.', '845251590@qq.com',
-              ['jxfzwar@163.com'], fail_silently=False)
-    return render(request, 'sendemail.html')
 
 
 
