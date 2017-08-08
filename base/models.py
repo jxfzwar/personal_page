@@ -36,6 +36,7 @@ class Article(models.Model):
     title = models.CharField(max_length=256)
     author = models.CharField(max_length=256)
     abstract = models.TextField('abstract')
+    publishment = models.CharField(max_length=256)
     upload_date = models.DateTimeField(auto_now_add=True, editable=True)
     #pdf = models.FileField()
     articleurl = models.CharField(max_length=256)

@@ -81,6 +81,10 @@
                                 
                             <div class="col-xs-12 col-sm-10 blog-content">
                                 <h4>{{ article.title }}</h4>
+
+                                <ul class="tag-cloud">
+                                    <li><a class="btn btn-xs btn-primary">{{ article.publishment}}</a></li>
+                                </ul>
                                 <h5>{{ article.author}}</h5>
                                 <p>{{ article.abstract}}</p>
                                 {% for column in article.column.all %}
