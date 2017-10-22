@@ -6,7 +6,17 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core.mail import send_mail
 
 def aindex(request):
-    return render(request, 'aindex.html')
+    allArticle = Article.objects.query_by_time()
+    i = 0
+    topthree = []
+    for x in allArticle:
+        topthree.append(x)
+        if i > 1:
+            break
+        else:
+            i = i + 1
+
+    return render(request, 'aindex.html', {"TopThree": topthree})
 
 def about(request):
     return render(request, 'about.html')
@@ -44,7 +54,7 @@ def blog(request):
 
 
 
-    paginator = Paginator(SearchResult, 2)  # Show 1 articles per page
+    paginator = Paginator(SearchResult, 5)  # Show 1 articles per page
 
     page = request.GET.get('page')
     try:
@@ -76,19 +86,19 @@ def contact(request):
         if number == None and company == None:
             sendsubject = 'From Personal Webpage: ' + subject
             sendcontent = 'name: ' + name + '\n' + 'email: ' + email + '\n' + 'message: ' + message
-            send_mail(sendsubject, sendcontent, '845251590@qq.com', ['jxfzwar@163.com'], fail_silently=False)
+            send_mail(sendsubject, sendcontent, 'jxfzwar@163.com', ['845251590@qq.com'], fail_silently=False)
         elif number != None and company == None:
             sendsubject = 'From Personal Webpage: ' + subject
             sendcontent = 'name: ' + name + '\n' + 'email: ' + email + '\n' + 'number: ' + number + '\n' + 'message: ' + message
-            send_mail(sendsubject, sendcontent, '845251590@qq.com', ['jxfzwar@163.com'], fail_silently=False)
+            send_mail(sendsubject, sendcontent, 'jxfzwar@163.com', ['845251590@qq.com'], fail_silently=False)
         elif number == None and company != None:
             sendsubject = 'From Personal Webpage: ' + subject
             sendcontent = 'name: ' + name + '\n' + 'email: ' + email + '\n' + 'company: ' + company + '\n' + 'message: ' + message
-            send_mail(sendsubject, sendcontent, '845251590@qq.com', ['jxfzwar@163.com'], fail_silently=False)
+            send_mail(sendsubject, sendcontent, 'jxfzwar@163.com', ['845251590@qq.com'], fail_silently=False)
         elif number != None and company != None:
             sendsubject = 'From Personal Webpage: ' + subject
             sendcontent = 'name: ' + name + '\n' + 'email: ' + email + '\n' + 'number: ' + number + '\n' + 'company: ' + company + '\n' + 'message: ' + message
-            send_mail(sendsubject, sendcontent, '845251590@qq.com', ['jxfzwar@163.com'], fail_silently=False)
+            send_mail(sendsubject, sendcontent, 'jxfzwar@163.com', ['845251590@qq.com'], fail_silently=False)
         submitstatus = "correct"
     else:
         submitstatus = "not complete"
