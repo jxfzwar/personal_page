@@ -63,21 +63,26 @@
                                 <div class="carousel-content">
                                     <h2 class="animation animated-item-1">Welcome to</h2>
                                     <h2 class="animation animated-item-1"><span>Li Yinfeng's</span>  Group</h2>
-                                    <p class="animation animated-item-2"><span>Address:</span> Department of Engineering Mechanics, School of Naval Architecture, Ocean and Civil Engineering, Shanghai Jiao Tong University, Shanghai 200240, China</p>
+                                    <p class="animation animated-item-2"><span>Address:</span> Department of Engineering Mechanics, Shanghai Jiao Tong University, Shanghai 200240, China</p>
                                     <p class="animation animated-item-2"><span>E-mail:</span> liyinfeng@sjtu.edu.cn</p>
                                     <!--<a class="btn-slide animation animated-item-3" href="#">Read More</a>-->
                                 </div>
                             </div>
 
-                            <!--
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                            <div class="col-sm-2 hidden-xs animation animated-item-4">
+                            </div>
+
+
+                            <div class="col-sm-4 hidden-xs animation animated-item-4">
                                 <div class="slider-img">
-                                    <img src="{% static "images/slider/shouye.png" %}" class="img-responsive">
+                                    <img src="{% static "images/head.png" %}" class="img-responsive">
                                 </div>
                             </div>
-                            -->
+
 
                         </div>
+
+
                     </div>
                 </div><!--/.item-->             
             </div><!--/.carousel-inner-->
@@ -86,14 +91,16 @@
 
 	<div class="about">
 		<div class="container">
-			<div class="col-md-3 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" >
-				<h2>ABOUT US</h2>
-				<img src="{% static "images/head.png" %}" class="img-responsive"/>
+            <div class="text-center  wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+				<h1>ABOUT US</h1>
 			</div>
 
-			<div class="col-md-9 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" >
+            <div class="text-center  wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
 				<h3>Brief Introduction about Li Yinfeng</h3>
-                <h4>Assistant Professor of Solid Mechanics, Shanghai Jiao Tong University</h4>
+                <h4>Associate Professor of Solid Mechanics, Shanghai Jiao Tong University</h4>
+			</div>
+
+			<div class=" wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" >
 				<p>Dr Yinfeng Li has focused on the understanding of basic principles that control mechanical properties and behaviors of
                     materials in both micro- and nano- scale. Based on the nature of the studied subjects, the continuum theory and molecule
                     dynamics method are employed, and a series of new models, solutions and observations is drawn. Even in his early academic
@@ -126,7 +133,7 @@
 				<div class="col-md-3">
 					<div class="hi-icon-wrap hi-icon-effect wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" >
 						<i class="fa fa-book"></i>
-						<h2>Surface Modification</h2>
+						<h2>Surface Functionalization</h2>
 						<p>Hydrogenation, hybrization, doping</p>
 					</div>
 				</div>
@@ -146,27 +153,129 @@
 		</div>
 	</div>
 
-	<div class="lates">
+
+    <div class="lates">
 		<div class="container">
 			<div class="text-center  wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-				<h1>LATEST PAPERS</h1>
+				<h1>SELECTED PAPERS</h1>
 			</div>
-            {% for article in TopThree %}
+            <hr>
                 <div class="col-md-2 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-                <span id="publish_date">{{ article.publish_year }}</span>
+                <span id="publish_date">2017</span>
                 </div>
                 <div class="col-md-10 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <ul class="tag-cloud">
-                    <li><a class="btn btn-xs btn-primary">{{ article.publishment}}</a></li>
+                    <li><a class="btn btn-xs btn-primary">Nanoscale</a></li>
                 </ul>
                 </div>
                 <div class="col-md-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-				<h3>{{ article.title }}</h3>
-                <h5>{{ article.author}}</h5>
-				<p>{{ article.abstract}}</p>
-                <a href="{{ article.articleurl }}" target="_blank" class="fulltext btn btn-primary readmore" >Full Text <i class="fa fa-angle-right"></i></a>
-			    </div>
-            {% endfor %}
+				<h3>Mechanical and thermal properties of grain boundary in planar heterostructure of graphene and hexagonal boron nitride</h3>
+                <h5>Yinfeng Li , Anran Wei , Han Ye and Haimin Yao</h5>
+                <p><i><u> Y. Li, A. Wei, H. Ye and H. Yao, Nanoscale, 2017, DOI: 10.1039/C7NR07306B</u></i></p></a>
+                <a href="http://pubs.rsc.org/en/content/articlehtml/2017/nr/c7nr07306b" target="_blank" class="fulltext btn btn-primary readmore" >Full Text <i class="fa fa-angle-right"></i></a>
+			    <hr>
+                </div>
+
+                <div class="col-md-2 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <span id="publish_date">2017</span>
+                </div>
+                <div class="col-md-10 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <ul class="tag-cloud">
+                    <li><a class="btn btn-xs btn-primary">Carbon</a></li>
+                </ul>
+                </div>
+                <div class="col-md-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+				<h3>Thermal characteristics of graphene nanoribbons endorsed by surface functionalization</h3>
+                <h5>Yinfeng Li, Anran Wei, Dibakar Datta</h5>
+                <p><i><u>Li Y, Wei A, Datta D. Thermal characteristics of graphene nanoribbons endorsed by surface functionalization[J]. Carbon, 2017, 113: 274-282.</u></i></p></a>
+                <a href="http://www.sciencedirect.com/science/article/pii/S0008622316310417" target="_blank" class="fulltext btn btn-primary readmore" >Full Text <i class="fa fa-angle-right"></i></a>
+			    <hr>
+                </div>
+
+                <div class="col-md-2 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <span id="publish_date">2015</span>
+                </div>
+                <div class="col-md-10 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <ul class="tag-cloud">
+                    <li><a class="btn btn-xs btn-primary">Scientific reports</a></li>
+                </ul>
+                </div>
+                <div class="col-md-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+				<h3>Surface hydrogenation regulated wrinkling and torque capability of hydrogenated graphene annulus under circular shearing</h3>
+                <h5>Yinfeng Li, Silin Liu, Dibakar Datta & Zhonghua Li</h5>
+                <p><i><u>Li Y, Liu S, Datta D, et al. Surface hydrogenation regulated wrinkling and torque capability of hydrogenated graphene annulus under circular shearing[J]. Scientific reports, 2015, 5: 16556.</u></i></p></a>
+                <a href="https://www.nature.com/articles/srep16556?WT.feed_name=subjects_mechanical-and-structural-properties-and-devices" target="_blank" class="fulltext btn btn-primary readmore" >Full Text <i class="fa fa-angle-right"></i></a>
+			    <hr>
+                </div>
+
+                <div class="col-md-2 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <span id="publish_date">2015</span>
+                </div>
+                <div class="col-md-10 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <ul class="tag-cloud">
+                    <li><a class="btn btn-xs btn-primary">Carbon</a></li>
+                </ul>
+                </div>
+                <div class="col-md-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+				<h3>Anomalous mechanical characteristics of graphene with tilt grain boundaries tuned by hydrogenation</h3>
+                <h5>Yinfeng Li, Zhonghua Li, Dibakar Datta</h5>
+                <p><i><u>Li Y, Datta D, Li Z. Anomalous mechanical characteristics of graphene with tilt grain boundaries tuned by hydrogenation[J]. Carbon, 2015, 90: 234-241.</u></i></p></a>
+                <a href="http://www.sciencedirect.com/science/article/pii/S0008622315002997" target="_blank" class="fulltext btn btn-primary readmore" >Full Text <i class="fa fa-angle-right"></i></a>
+			    <hr>
+                </div>
+
+                <div class="col-md-2 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <span id="publish_date">2014</span>
+                </div>
+                <div class="col-md-10 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <ul class="tag-cloud">
+                    <li><a class="btn btn-xs btn-primary">Computational Materials Science</a></li>
+                </ul>
+                </div>
+                <div class="col-md-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+				<h3>Surface-structure-regulated penetration of nanoparticles across a cell membrane</h3>
+                <h5>YinfengLi, DibakarDatta, ZhonghuaLi, Vivek B.Shenoy</h5>
+                <p><i><u>Li Y, Li X, Li Z, et al. Surface-structure-regulated penetration of nanoparticles across a cell membrane[J]. Nanoscale, 2012, 4(12): 3768-3775.</u></i></p></a>
+                <a href="http://www.sciencedirect.com/science/article/pii/S0927025613006885" target="_blank" class="fulltext btn btn-primary readmore" >Full Text <i class="fa fa-angle-right"></i></a>
+			    <hr>
+                </div>
+
+                <div class="col-md-2 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <span id="publish_date">2013</span>
+                </div>
+                <div class="col-md-10 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <ul class="tag-cloud">
+                    <li><a class="btn btn-xs btn-primary">Proceedings of the National Academy of Sciences</a></li>
+                </ul>
+                </div>
+                <div class="col-md-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+				<h3>Graphene microsheets enter cells through spontaneous membrane penetration at edge asperities and corner sites</h3>
+                <h5>Yinfeng Li, Hongyan Yuan, Annette von dem Bussch, Megan Creighton, Robert H. Hurt, Agnes B. Kane and Huajian Gao</h5>
+                <p><i><u>Li Y, Yuan H, von dem Bussche A, et al. Graphene microsheets enter cells through spontaneous membrane penetration at edge asperities and corner sites[J].
+                    Proceedings of the National Academy of Sciences, 2013, 110(30): 12295-12300.</u></i></p></a>
+                <a href="http://www.pnas.org/content/110/30/12295.short" target="_blank" class="fulltext btn btn-primary readmore" >Full Text <i class="fa fa-angle-right"></i></a>
+			    <hr>
+                </div>
+
+                <div class="col-md-2 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <span id="publish_date">2012</span>
+                </div>
+                <div class="col-md-10 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <ul class="tag-cloud">
+                    <li><a class="btn btn-xs btn-primary">Nanoscale</a></li>
+                </ul>
+                </div>
+                <div class="col-md-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+				<h3>Surface-structure-regulated penetration of nanoparticles across a cell membrane</h3>
+                <h5>Yinfeng Li, Xuejin Li, Zhonghua Li and Huajian Gao</h5>
+                <p><i><u>Li Y, Li X, Li Z, et al. Surface-structure-regulated penetration of nanoparticles across a cell membrane[J]. Nanoscale, 2012, 4(12): 3768-3775.</u></i></p></a>
+                <a href="http://www.pnas.org/content/110/30/12295.short" target="_blank" class="fulltext btn btn-primary readmore" >Full Text <i class="fa fa-angle-right"></i></a>
+			    <hr>
+                </div>
+
+
+
+
 
 
 

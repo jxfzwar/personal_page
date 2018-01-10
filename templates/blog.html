@@ -78,13 +78,15 @@
                                     <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>-->
                                 </div>
                             </div>
-                                
-                            <div class="col-xs-12 col-sm-10 blog-content">
-                                <h4>{{ article.title }}</h4>
 
+                            <div class="col-xs-12 col-sm-10 blog-content">
                                 <ul class="tag-cloud">
                                     <li><a class="btn btn-xs btn-primary">{{ article.publishment}}</a></li>
                                 </ul>
+                            </div>
+                                
+                            <div class="col-xs-12  blog-content">
+                                <h4>{{ article.title }}</h4>
                                 <h5>{{ article.author}}</h5>
                                 <p>{{ article.abstract}}</p>
                                 <p>
@@ -95,6 +97,7 @@
                                 <p><a href="{{ article.articleurl }}" target="_blank" class="btn btn-primary readmore" >Full Text <i class="fa fa-angle-right"></i></a></p>
                             </div>
                         </div>
+                    <hr>
                     </div>
                      {% endfor %}<!--/.blog-item-->
 
